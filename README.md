@@ -5,7 +5,7 @@ Impersonation protection allows you mark 350 VIP users to have them additionally
 But it contains a painful process of having to individually click all the users you want to add...
 ![image](https://github.com/LouisMastelinck/set--TargetedUsersToProtect-bulk-script/assets/17981130/43b359e2-21cd-41a9-be34-85b6ad47b7fc)
 
-**Requirement**
+# **Requirement**
 
 Powershell 7 --> [Windows install](https://learn.microsoft.com/en-us/powershell/scripting/install/install-powershell-on-windows?view=powershell-7.5)
 
@@ -14,7 +14,15 @@ Powershell 7 --> [Windows install](https://learn.microsoft.com/en-us/powershell/
 ## CSV 
 
 This script will allow you to import a CSV that contains all of your users that you want to protect from impersonation. 
-A sample CSV is provided so you know how to format it. 
+A sample CSV is provided so you know how to format it.
 
-![image](https://github.com/LouisMastelinck/set--TargetedUsersToProtect-bulk-script/assets/17981130/d18238b0-506d-4853-aa40-545eee72102e)
+## Features
+- Importing from a .csv file will create a "-import-results.csv" file in the same directory as the csv import file. This file will showcase all results for every entity.
+- Status report in-line and in "import-results.csv" file.
+- Status options:
+  - Success
+  - Failure
+  - Already Exists (this showcases that the user was already assigned to Impersonation Protection in the selected Anti-Phish Policy
 
+### Example of Menu
+<img width="518" height="276" alt="image" src="https://github.com/user-attachments/assets/6467e06c-5b86-4478-9f35-43bf06261323" />
