@@ -132,7 +132,7 @@ function Remove-AllUsersFromPolicy {
 # -----------------------------------------------
 # Connect to Exchange Online
 # -----------------------------------------------
-Connect-ExchangeOnline -UserPrincipalName thor.nicolai@thecollectivetest.eu -ShowProgress $true
+Connect-ExchangeOnline
 
 # -----------------------------------------------
 # Main menu loop
