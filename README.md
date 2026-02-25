@@ -19,6 +19,7 @@ This script will allow you to import a CSV that contains all of your users that 
 A sample CSV is provided so you know how to format it.
 
 ## Features
+- Built-in error handling for Targets and enablement of the policy feature.
 - Importing from a .csv file will create a "-import-results.csv" file in the same directory as the csv import file. This file will showcase all results for every entity.
 - Status report in-line and in "import-results.csv" file.
 - Status options:
