@@ -5,14 +5,11 @@ Impersonation protection allows you mark 350 VIP users to have them additionally
 But it contains a painful process of having to individually click all the users you want to add...
 ![image](https://github.com/LouisMastelinck/set--TargetedUsersToProtect-bulk-script/assets/17981130/43b359e2-21cd-41a9-be34-85b6ad47b7fc)
 
-
-# set -TargetedUsersToProtect-bulk-script
-
 **Requirement**
 
-Installation of the exchange online powershell module: 
+Powershell 7 --> [Windows install](https://learn.microsoft.com/en-us/powershell/scripting/install/install-powershell-on-windows?view=powershell-7.5)
 
-https://learn.microsoft.com/en-us/powershell/exchange/exchange-online-powershell-v2?view=exchange-ps#install-and-maintain-the-exchange-online-powershell-module
+[Installation of the Exchange Online PowerShell module](https://learn.microsoft.com/en-us/powershell/exchange/exchange-online-powershell-v2?view=exchange-ps#install-and-maintain-the-exchange-online-powershell-module)
 
 ## CSV 
 
