@@ -7,6 +7,8 @@ But it contains a painful process of having to individually click all the users 
 
 # **Requirement**
 
+Permissions to manage Anti-Phish Policies
+
 Powershell 7 --> [Windows install](https://learn.microsoft.com/en-us/powershell/scripting/install/install-powershell-on-windows?view=powershell-7.5)
 
 [Installation of the Exchange Online PowerShell module](https://learn.microsoft.com/en-us/powershell/exchange/exchange-online-powershell-v2?view=exchange-ps#install-and-maintain-the-exchange-online-powershell-module)
