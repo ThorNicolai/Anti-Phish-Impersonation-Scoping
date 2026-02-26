@@ -50,6 +50,27 @@ function Import-UsersToPolicy {
         return
     }
 
+    # Validate that every row contains a properly formed email address in the UPN field
+    $emailRegex  = '^[^@\s]+@[^@\s]+\.[^@\s]+$'
+    $invalidRows = @()
+    for ($i = 0; $i -lt $users.Count; $i++) {
+        $entry = $users[$i].'username;upn'
+        $parts = $entry -split ';'
+        $upn   = if ($parts.Count -gt 1) { $parts[1].Trim() } else { '' }
+
+        if (-not $upn -or $upn -notmatch $emailRegex) {
+            $invalidRows += "  Row $($i + 2): '$entry' — UPN '$upn' is not a valid email address."
+        }
+    }
+
+    if ($invalidRows.Count -gt 0) {
+        Write-Host "" 
+        Write-Host "CSV validation failed. The following row(s) do not contain a valid email address:" -ForegroundColor Red
+        $invalidRows | ForEach-Object { Write-Host $_ -ForegroundColor Red }
+        Write-Host "Import cancelled. Please fix the CSV and try again." -ForegroundColor Red
+        return
+    }
+
     # Get existing entries to detect duplicates
     $existingEntries = (Get-AntiPhishPolicy -Identity $policy.Identity).TargetedUsersToProtect
     if (-not $existingEntries) { $existingEntries = @() }
